@@ -1,0 +1,44 @@
+============================================================
+STUDENTWELL AI — DATASET VALIDATION REPORT
+============================================================
+Raw dataset rows : 4004
+
+--- Quality Checks ---
+  Missing/empty 'conversation_id'           : 0 rows removed
+  Missing/empty 'turn_id'           : 0 rows removed
+  Missing/empty 'text'           : 0 rows removed
+  Missing/empty 'emotion'           : 0 rows removed
+  Text too short (< 8 chars)       : 1 rows removed
+  Invalid emotion labels             : 0 rows removed — []
+  Exact duplicate texts              : 0 rows removed
+  Near-duplicate texts (Jaccard≥0.85): 13 rows removed
+  Conversations with broken turn seq : 495 (not removed, flagged only)
+  Emotion keyword leakage (warnings — rows NOT removed):
+    anger          1 rows (0.2%)
+    fear           0 rows (0.0%)
+    neutral        0 rows (0.0%)
+    surprise      10 rows (1.8%)
+    disgust        0 rows (0.0%)
+    sadness        0 rows (0.0%)
+    joy            0 rows (0.0%)
+
+--- Label Distribution ---
+Emotion        Count   Target  Status
+--------------------------------------------------
+  anger            572      572  ✓
+  disgust          571      572  ⚠ 1 short
+  fear             571      572  ⚠ 1 short
+  joy              572      572  ✓
+  neutral          570      572  ⚠ 2 short
+  sadness          572      572  ✓
+  surprise         562      572  ⚠ 10 short
+
+--- Summary ---
+  Rows before cleaning : 4004
+  Rows removed         : 14
+  Rows after cleaning  : 3990
+  Target total         : 4004
+  Coverage             : 99.7%
+  Broken turn sequences: 495
+  ⚠ Some emotions are below target — consider running more generation.
+============================================================

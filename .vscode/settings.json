@@ -1,0 +1,6 @@
+{
+  "files.exclude": {
+    "**/.sidecar": true
+  },
+  "explorer.excludeGitIgnore": true
+}

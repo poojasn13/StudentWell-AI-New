@@ -1,0 +1,24 @@
+# Machine Learning and NLP
+torch
+transformers
+datasets
+accelerate
+scikit-learn
+
+# Data Processing
+pandas
+numpy
+tqdm
+
+# GenAI Integration
+ollama
+
+# Frontend
+streamlit
+
+# Evaluation and Visualization
+matplotlib
+seaborn
+
+# Utilities
+python-dotenv

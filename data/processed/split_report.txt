@@ -1,0 +1,51 @@
+============================================================
+STUDENTWELL AI — PREPROCESSING SPLIT REPORT
+============================================================
+Total rows         : 3990
+Total conversations: 2282
+Label mapping      : {'neutral': 0, 'joy': 1, 'sadness': 2, 'anger': 3, 'fear': 4, 'surprise': 5, 'disgust': 6}
+
+--- TRAIN (70.2%) ---
+  Conversations : 1597
+  Rows          : 2799
+    neutral         409
+    joy             399
+    sadness         403
+    anger           393
+    fear            392
+    surprise        409
+    disgust         394
+
+--- VAL (14.8%) ---
+  Conversations : 342
+  Rows          : 592
+    neutral          84
+    joy              94
+    sadness          73
+    anger            94
+    fear             81
+    surprise         76
+    disgust          90
+
+--- TEST (15.0%) ---
+  Conversations : 343
+  Rows          : 599
+    neutral          77
+    joy              79
+    sadness          96
+    anger            85
+    fear             98
+    surprise         77
+    disgust          87
+
+--- MODEL INPUT SAMPLE (first 3 training rows) ---
+  Label : surprise (5)
+  Input : [CONVERSATION CONTEXT] No prior context. [CURRENT MESSAGE] Man, that lecture was so confusing. I have no idea what they ...
+
+  Label : neutral (0)
+  Input : [CONVERSATION CONTEXT] The student was surprised by how unclear the lecture was. [CURRENT MESSAGE] I guess I just need t...
+
+  Label : fear (4)
+  Input : [CONVERSATION CONTEXT] No prior context. [CURRENT MESSAGE] Holy crap, it crashed on me right when I was about to present...
+
+============================================================

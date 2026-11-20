@@ -1,0 +1,36 @@
+# Python virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Hugging Face cache
+.cache/
+.cache/huggingface/
+
+# macOS files
+.DS_Store
+
+# Logs
+*.log
+
+# Kiro IDE cache
+.sidecar/
+
+# Large binary model weights — commit config/tokenizer only, not safetensors
+# Comment these lines out if you want to commit the full model (needs Git LFS)
+models/distilbert_emotion/model.safetensors
+models/distilbert_emotion_best/model.safetensors
+
+# Generation checkpoint (not needed after dataset is complete)
+data/raw/generation_checkpoint.json
